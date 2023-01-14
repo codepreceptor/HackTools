@@ -19,8 +19,7 @@ It has more than 20 working Tools which you can install and use it easily.
  $  python HackTools.py
 
 # Single Command
-
-### apt update && apt upgrade
+apt update && apt upgrade
 pkg install python git
 git clone https://github.com/codepreceptor/HackTools
 cd HackTools
