@@ -23,5 +23,5 @@ apt update && apt upgrade
 pkg install python git
 git clone https://github.com/codepreceptor/HackTools
 cd HackTools
-pip install -r requirements.txt  
+pip install -r requirements.txt
 python HackTools.py
