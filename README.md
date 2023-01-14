@@ -1,6 +1,6 @@
 # HackTools
-You can install all tools using Single Tools.
-It has more than 100 working Tools which you can install and use easily.
+You can install best Hacking Tools using HackTools.
+It has more than 20 working Tools which you can install and use it easily.
 
 
 
