@@ -1,4 +1,4 @@
-import os, time,pyfiglet,webbrowser
+import os, time, pyfiglet, webbrowser
 from colorama import Fore
 from lolpython import lol_py 
 
