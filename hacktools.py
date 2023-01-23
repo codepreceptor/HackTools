@@ -3,7 +3,9 @@ from colorama import Fore
 from lolpython import lol_py 
 
 
-
+def wait():
+    time.sleep(1.2)
+    
 def clear():
     os.system("clear")
 
@@ -40,9 +42,38 @@ def option():
 def option_1():
     options_1 = '''    [1] Nmap
     [2] Sqlmap
-    [3] TMScanner   '''
+    [3] TMScanner
+    [4] BACK
+    [5] EXIT'''
     lol_py(options_1)
     
+    user_input =  input(Fore.YELLOW+"Choose Option: ")
+    
+    try:
+        user = int(user_input)
+        
+        if user == 1:
+            option_1()
+        elif user == 2:
+            option_2()
+        elif user == 3:
+            option_3()
+        elif user == 4:
+            clear()
+            logo()
+            about_creator()
+            option()
+            choose()
+        elif user == 5:
+            option_0()
+      
+            
+    except ValueError:
+        print(Fore.RED+'''Please Choose Correct Option
+        Please Wait for 3 Seconds''')
+        time.sleep(3)
+        os.system("clear")
+        option_1()
     
 def option_2():
     options_2 = '''    [1] Metasploit Framework
@@ -72,12 +103,19 @@ def option_0():
     os.system("clear")
     print ("\n\n")
     logo()
+    wait()
     about_creator()
-    thanks = '''      Thanks For Using My Tool.\n
-      PLEASE DON'T FORGET TO JOIN MY TELEGRAM AND YOUTUBE CHANNEL.\n
-      HAVE A GOOD DAY.\n
-    '''   
+    wait()
+    thanks = (f"      THANKS FOR USING MY TOOL.\n")
+    please = (f"      PLEASE DON'T FORGOT TO JOIN MY YOUTUBE AND TELEGRAM CHANNELS.\n")
+    havean = (f"      HAVE A NICE DAY.\n\n") 
+    
     lol_py(thanks)
+    wait()
+    lol_py(please)
+    wait ()
+    lol_py(havean)
+    
     exit()
     
     
@@ -117,6 +155,6 @@ def home():
     choose()                          
     
     
-get_url= webbrowser.open('https://t.me/codepreceptor')
+webbrowser.open('https://t.me/codepreceptor')
 
 home() 
