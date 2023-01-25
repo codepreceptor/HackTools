@@ -6,16 +6,14 @@ It has more than 20 working Tools which you can install and use it easily.
 
 # Installation Process
 
- **$**  apt update && apt upgrade
+>**$**   apt update && apt upgrade
  
- **$** pkg install python git
+>**$** pkg install python wget git
 
- **$**  git clone https://github.com/codepreceptor/HackTools
+>**$**  wget $PREFIX/bin https://raw.githubusercontent.com/codepreceptor/HackTools/main/hacktools
 
- **$**  cd HackTools
+>**$**  chmod +x $PREFIX/bin/hacktools
 
- **$** pip install -r requirements.txt
-
- **$**  python HackTools.py
+>**$** hacktools
 
 
