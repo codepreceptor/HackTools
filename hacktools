@@ -1,0 +1,37 @@
+#!/data/data/com.termux/files/usr/bin/bash
+
+if [ ! -w "$PREFIX/bin/python" ]
+then
+        pkg install python
+fi
+
+if [ ! -w "$PREFIX/lib/python3.11/site-packages/colorama" ]
+then
+        pip install colorama
+fi
+
+
+if [ ! -w "$PREFIX/bin/figlet" ]
+then
+        pkg install figlet
+fi
+
+
+if [ ! -w "$PREFIX/lib/python3.11/site-packages/lolpython" ]
+then
+        pip install lolpython
+fi
+
+
+if [ -w "$HOME/HackTools/hacktools.py" ]
+then
+        cd $HOME/HackTools
+        python3 hacktools.py
+
+else
+        pkg install git
+        git clone https://github.com/codepreceptor/HackTools
+        cd HackTools
+        python3 hacktools.py
+
+fi
