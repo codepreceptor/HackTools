@@ -6,14 +6,14 @@ It has more than 20 working Tools which you can install and use it easily.
 
 # Installation Process
 
->**$**   apt update && apt upgrade
+**$**   apt update && apt upgrade
  
->**$** pkg install wget git
+**$** pkg install wget git
 
->**$**  wget $PREFIX/bin https://raw.githubusercontent.com/codepreceptor/HackTools/main/hacktools
+**$**  wget $PREFIX/bin https://raw.githubusercontent.com/codepreceptor/HackTools/main/hacktools
 
->**$**  chmod +x $PREFIX/bin/hacktools
+**$**  chmod +x $PREFIX/bin/hacktools
 
->**$** hacktools
+**$** hacktools
 
 
