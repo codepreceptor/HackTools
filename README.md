@@ -8,7 +8,7 @@ It has more than 20 working Tools which you can install and use it easily.
 
 >**$**   apt update && apt upgrade
  
->**$** pkg install python wget git
+>**$** pkg install wget git
 
 >**$**  wget $PREFIX/bin https://raw.githubusercontent.com/codepreceptor/HackTools/main/hacktools
 
