@@ -3,6 +3,7 @@
 if [ ! -w "$PREFIX/bin/python" ]
 then
         pkg install python
+        pkg install python3
 fi
 
 if [ ! -w "$PREFIX/lib/python3.11/site-packages/colorama" ]
