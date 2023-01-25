@@ -24,15 +24,15 @@ then
 fi
 
 
-if [ -w "$HOME/HackTools/hacktools.py" ]
+if [ -w "$PREFIX/opt/HackTools/hacktools.py" ]
 then
-        cd $HOME/HackTools
+        cd $PREFIX/opt/HackTools
         python3 hacktools.py
 
 else
         pkg install git
-        git clone https://github.com/codepreceptor/HackTools
-        cd HackTools
+        git clone https://github.com/codepreceptor/HackTools $PREFIX/opt/HackTools
+        cd $PREFIX/opt/HackTools
         python3 hacktools.py
 
 fi
