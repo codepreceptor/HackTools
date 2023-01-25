@@ -1,4 +1,11 @@
-import os, time, pyfiglet, webbrowser
+import os
+
+require = '''echo {} | pkg up
+pip install colorama lolpython
+pkg install python figlet'''
+
+os.system(require)
+import  time,webbrowser
 from colorama import Fore
 from lolpython import lol_py 
 
@@ -11,8 +18,8 @@ def clear():
 
 def logo():
      print(Fore.RED+"=======================================================")
-     print(Fore.GREEN+pyfiglet.figlet_format(" HACKTOOLS "))
-    
+     text = "echo {}| figlet HACKTOOLS | lolpython"
+     os.system(text)
      print(Fore.RED+"===================== version 1.0 =====================\n")
 
 
@@ -66,7 +73,8 @@ def option_1():
             choose()
         elif user == 5:
             option_0()
-      
+        else:
+            option_1()
             
     except ValueError:
         print(Fore.RED+'''Please Choose Correct Option
@@ -138,7 +146,12 @@ def choose():
             option_5()
         elif user == 0:
             option_0()
-            
+        else:
+            print(Fore.RED+'''Please Choose Correct Option
+        Please Wait for 3 Seconds''')
+            time.sleep(3)
+            os.system("clear")
+            home() 
     except ValueError:
         print(Fore.RED+'''Please Choose Correct Option
         Please Wait for 3 Seconds''')
@@ -155,6 +168,5 @@ def home():
     choose()                          
     
     
-webbrowser.open('https://t.me/codepreceptor')
 
 home() 
