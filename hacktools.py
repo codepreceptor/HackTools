@@ -41,12 +41,12 @@ def option():
     lol_py(options)
 
 def option_1():
-    options_1 = '''    [1] Nmap
+    options_1_1 = '''    [1] Nmap
     [2] Sqlmap
     [3] TMScanner
     [4] BACK
     [5] EXIT'''
-    lol_py(options_1)
+    lol_py(options_1_1)
     
     user_input =  input(Fore.YELLOW+"Choose Option: ")
     
@@ -74,19 +74,14 @@ def option_1():
             option_1()
             
     except ValueError:
-        print(Fore.RED+'''Please Choose Correct Option
-        Please Wait for 3 Seconds''')
-        time.sleep(3)
-        os.system("clear")
-        logo()
-        about_creator()
+        error()
         option_1()
     
 def option_2():
-    options_21= '''    [1] Metasploit Framework
+    options_2_1= '''    [1] Metasploit Framework
     [2] BACK
     [0] EXIT'''
-    lol_py(options_21)
+    lol_py(options_2_1)
     user_input =  input(Fore.YELLOW+"Choose Option: ")
     try:
         user = int(user_input)
@@ -112,12 +107,7 @@ def option_2():
             option_2()
             
     except ValueError:
-            print(Fore.RED+'''Please Choose Correct Option
-        Please Wait for 3 Seconds''')
-            time.sleep(3)
-            os.system("clear")
-            logo()
-            about_creator()
+            error()
             option_2()
     
 def option_3():
@@ -146,12 +136,7 @@ def option_3():
             option_3()
             
     except ValueError:
-            print(Fore.RED+'''Please Choose Correct Option
-        Please Wait for 3 Seconds''')
-            time.sleep(3)
-            os.system("clear")
-            logo()
-            about_creator()
+            error()
             option_3()                
     
           
@@ -182,12 +167,7 @@ def option_4():
               option_4()
               
     except ValueError:
-            print(Fore.RED+'''Please Choose Correct Option
-        Please Wait for 3 Seconds''')
-            time.sleep(3)
-            os.system("clear")
-            logo()
-            about_creator()
+            error()
             option_4()                               
           
 def option_5():
@@ -219,12 +199,7 @@ sh install '''
              option_5()
 
     except ValueError:
-            print(Fore.RED+'''Please Choose Correct Option
-        Please Wait for 3 Seconds''')
-            time.sleep(3)
-            os.system("clear")
-            logo()
-            about_creator()
+            error()
             option_5()                  
     
 def option_0():
@@ -286,7 +261,14 @@ def home():
     about_creator()
     option()
     choose()                          
-    
+
+def error():
+        print(Fore.RED+'''Please Choose Correct Option
+        Please Wait for 3 Seconds''')
+        time.sleep(3)
+        os.system("clear")
+        logo()
+        about_creator()    
     
 
 home() 
