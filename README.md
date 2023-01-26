@@ -5,7 +5,7 @@ It has more than 20 working Tools which you can install and use it easily.
 
 
 # Installation Process
-H
+
 **$**   apt update && apt upgrade
  
 **$** pkg install wget git
