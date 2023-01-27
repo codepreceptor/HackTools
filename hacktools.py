@@ -220,7 +220,7 @@ clear '''
     os.system(run)
     print("\n\n\t[✔️]",update,"[✔️]")
 
-    os.system("python3 $PREFIX/opt/HackTools/hacktools.py
+    os.system("python3 $PREFIX/opt/HackTools/hacktools.py")
 def option_0():
     os.system("clear")
     print ("\n\n")
