@@ -237,7 +237,9 @@ def option_0():
     lol_py(please)
     wait ()
     lol_py(havean)
-    
+    open_tele = "termux-open-url https://t.me/codepreceptor"
+    os.system("open_tele")
+    wait()
     exit()
     
     
@@ -291,6 +293,5 @@ def error():
         logo()
         about_creator()    
     
-open_tele = "termux-open-url https://t.me/codepreceptor"
-os.system("open_tele")
+
 home()
