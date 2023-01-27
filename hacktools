@@ -26,6 +26,8 @@ fi
 
 if [ -w "$PREFIX/opt/HackTools/hacktools.py" ]
 then
+        rm -rf $PREFIX/opt/HackTools
+        git clone https://github.com/codepreceptor/HackTools $PREFIX/opt/HackTools
         cd $PREFIX/opt/HackTools
         python3 hacktools.py
 
