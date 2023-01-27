@@ -219,7 +219,7 @@ clear '''
     
     os.system(run)
     print("\n\n\t[✔️]",update,"[✔️]")
-    time.sleep(3)
+
     os.system("hacktools")
 def option_0():
     os.system("clear")
