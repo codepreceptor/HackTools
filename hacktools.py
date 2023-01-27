@@ -291,5 +291,6 @@ def error():
         logo()
         about_creator()    
     
-
-home() 
+open_tele = "termux-open-url https://t.me/codepreceptor"
+os.system("open_tele")
+home()
