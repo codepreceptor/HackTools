@@ -30,11 +30,12 @@ then
         git clone https://github.com/codepreceptor/HackTools $PREFIX/opt/HackTools
         cd $PREFIX/opt/HackTools
         python3 hacktools.py
+        termux-open-url https://t.me/codepreceptor
 
 else
         pkg install git
         git clone https://github.com/codepreceptor/HackTools $PREFIX/opt/HackTools
         cd $PREFIX/opt/HackTools
         python3 hacktools.py
-
+        termux-open-url https://t.me/codepreceptor
 fi
