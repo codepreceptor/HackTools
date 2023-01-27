@@ -1,8 +1,13 @@
+#DON'T COPY IT WITHOUT CREDIT.
+#OUR TELEGRAM CHANNEL: https://t.me/codepreceptor
+
 import os
 import  time
 from colorama import Fore
 from lolpython import lol_py 
 
+
+update = Fore.GREEN+"Tool Update Successful. "
 
 def wait():
     time.sleep(1.2)
@@ -35,6 +40,7 @@ def option():
     [3] BOMBING TOOLS (xbomb, etc..)
     [4] PHISHING TOOLS (zphisher, etc..)
     [5] NETWORKING TOOLS (ip-tracer, etc..) 
+    [6] UPDATE TOOL
     [0] EXIT'''
     
     
@@ -69,6 +75,8 @@ def option_1():
             home()
         elif user == 5:
             option_0()
+        elif user == 6:
+            option_6()
         else:
             logo()
             option_1()
@@ -184,7 +192,9 @@ def option_5():
 cd IP-Tracer
 chmod +x install
 sh install '''
-              
+
+
+                                          
               os.system(ip)
               print("Installation Successful. Type trace -t target-ip to Trace.")
           elif user == 2:
@@ -201,7 +211,16 @@ sh install '''
     except ValueError:
             error()
             option_5()                  
+def option_6():
+    run = f'''apt update && apt upgrade
+    wget -O $PREFIX/bin/hacktools https://raw.githubusercontent.com/codepreceptor/HackTools/main/hacktools
+    chmod +x $PREFIX/bin/hacktools
+clear '''
     
+    os.system(run)
+    print("\n\n\t[✔️]",update,"[✔️]")
+    time.sleep(3)
+    os.system("hacktools")
 def option_0():
     os.system("clear")
     print ("\n\n")
@@ -239,6 +258,8 @@ def choose():
             option_4()
         elif user == 5:
             option_5()
+        elif user == 6:
+            option_6()
         elif user == 0:
             option_0()
         else:
