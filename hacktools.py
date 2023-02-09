@@ -19,7 +19,7 @@ def logo():
      print(Fore.RED+"======================================================")
      text = "echo {}| figlet HACKTOOLS | lolpython"
      os.system(text)
-     print(Fore.RED+"===================== version 1.0 ====================\n")
+     print(Fore.RED+"===================== version 1.1 ====================\n")
 
 
 def about_creator():
@@ -50,8 +50,9 @@ def option_1():
     options_1_1 = '''    [1] Nmap
     [2] Sqlmap
     [3] TMScanner
-    [4] BACK
-    [5] EXIT'''
+    [4] Kali Linux 
+    [5] BACK
+    [6] EXIT'''
     lol_py(options_1_1)
     
     user_input =  input(Fore.YELLOW+"Choose Option: ")
@@ -71,12 +72,15 @@ def option_1():
             tmscanner = " cd $HOME && apt update && apt upgrade && apt install git python2 && git clone https://github.com/TechnicalMujeeb/TM-scanner.git && cd TM-scanner && chmod +x * && sh install.sh"
             os.system(tmscanner)
             print("Installation Successful. Type cd TM-scanner && python2 tmscanner.py to Start.")
+        
         elif user == 4:
-            home()
+            kali = "cd $HOME && apt update && apt upgrade && pkg install wget fish && wget https://gitlab.com/kalilinux/nethunter/build-scripts/kali-nethunter-project/raw/master/nethunter-rootless/install-nethunter-termux && chmod +x install-nethunter-termux && ./install-nethunter-termux"
+            os.system(kali)
+            print('''Installation Successful. Type "nethunter" to start Kali Machine.''')
         elif user == 5:
-            option_0()
+            home()
         elif user == 6:
-            option_6()
+            option_0()
         else:
             logo()
             option_1()
@@ -219,7 +223,7 @@ clear '''
     
     os.system(run)
     print("\n\n\t[✔️]",update,"[✔️]")
-
+    time.sleep(3)
     os.system("python3 $PREFIX/opt/HackTools/hacktools.py")
 def option_0():
     os.system("clear")
@@ -237,6 +241,7 @@ def option_0():
     lol_py(please)
     wait ()
     lol_py(havean)
+    
     exit()
     
     
@@ -291,4 +296,4 @@ def error():
         about_creator()    
     
 
-home()
+home() 
