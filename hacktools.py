@@ -1,8 +1,7 @@
 #DON'T COPY IT WITHOUT CREDIT.
 #OUR TELEGRAM CHANNEL: https://t.me/codepreceptor
 
-import os
-import  time
+import os,time
 from colorama import Fore
 from lolpython import lol_py 
 
@@ -19,7 +18,7 @@ def logo():
      print(Fore.RED+"======================================================")
      text = "echo {}| figlet HACKTOOLS | lolpython"
      os.system(text)
-     print(Fore.RED+"===================== version 1.1 ====================\n")
+     print(Fore.RED+"===================== version 1.2 ====================\n")
 
 
 def about_creator():
@@ -39,8 +38,9 @@ def option():
     [2] EXPLOITATION TOOLS (metasploit, etc..)
     [3] BOMBING TOOLS (xbomb, etc..)
     [4] PHISHING TOOLS (zphisher, etc..)
-    [5] NETWORKING TOOLS (ip-tracer, etc..) 
-    [6] UPDATE TOOL
+    [5] NETWORKING TOOLS (ip-tracer, etc..)
+    [6] Instagram Brutal Force 
+    [7] UPDATE TOOL
     [0] EXIT'''
     
     
@@ -214,8 +214,27 @@ sh install '''
 
     except ValueError:
             error()
-            option_5()                  
+            option_5()   
+
 def option_6():
+    #run = f'''cd $HOME
+#    apt update && apt upgrade
+#    apt install git python python3
+#    git clone https://github.com/Bitwise-01/Instagram.git
+#    pip install pyproject.toml numpy 
+#    pip3 install pyproject.toml numpy
+#    pip install pipenv asdf
+#    pip3 install pipenv asdf
+#    cd Instagram
+#    wget https://raw.githubusercontent.com/codepreceptor/Instagram/main/pass_list.txt
+#    wget https://raw.githubusercontent.com/codepreceptor/Instagram/main/proxy.txt '''
+#    os.system(run)
+    print('''\n\n\t [✔️]Installation Successful, Type cd Instagram and then pipenv shell and then python instagram.py -u {username} -p pass_list.txt -px proxy.txt''')
+            
+
+
+
+def option_7():
     run = f'''apt update && apt upgrade
     wget -O $PREFIX/bin/hacktools https://raw.githubusercontent.com/codepreceptor/HackTools/main/hacktools
     chmod +x $PREFIX/bin/hacktools
@@ -264,6 +283,8 @@ def choose():
             option_5()
         elif user == 6:
             option_6()
+        elif user == 7:
+            option_7()
         elif user == 0:
             option_0()
         else:
