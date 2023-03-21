@@ -217,18 +217,18 @@ sh install '''
             option_5()   
 
 def option_6():
-    #run = f'''cd $HOME
-#    apt update && apt upgrade
-#    apt install git python python3
-#    git clone https://github.com/Bitwise-01/Instagram.git
-#    pip install pyproject.toml numpy 
-#    pip3 install pyproject.toml numpy
-#    pip install pipenv asdf
-#    pip3 install pipenv asdf
-#    cd Instagram
-#    wget https://raw.githubusercontent.com/codepreceptor/Instagram/main/pass_list.txt
-#    wget https://raw.githubusercontent.com/codepreceptor/Instagram/main/proxy.txt '''
-#    os.system(run)
+    run = f'''cd $HOME
+    apt update && apt upgrade
+    apt install git python python3
+    git clone https://github.com/Bitwise-01/Instagram.git
+    pip install pyproject.toml numpy 
+    pip3 install pyproject.toml numpy
+    pip install pipenv asdf
+    pip3 install pipenv asdf
+    cd Instagram
+    wget https://raw.githubusercontent.com/codepreceptor/Instagram/main/pass_list.txt
+    wget https://raw.githubusercontent.com/codepreceptor/Instagram/main/proxy.txt '''
+    os.system(run)
     print('''\n\n\t [✔️]Installation Successful, Type cd Instagram and then pipenv shell and then python instagram.py -u {username} -p pass_list.txt -px proxy.txt''')
             
 
