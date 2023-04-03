@@ -102,7 +102,6 @@ def option_2():
             pkg install wget -y
             wget https://github.com/gushmazuko/metasploit_in_termux/raw/master/metasploit.sh
             bash metasploit.sh
-            rm metasploit.sh
             cd metasploit-framework
             bundle install '''
             os.system(metasploit )
