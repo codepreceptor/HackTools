@@ -106,6 +106,7 @@ def option_2():
             cd metasploit-framework
             bundle install '''
             os.system(metasploit )
+            print("Installation Successful, Type msfconsole")
             
         elif user == 0:
             option_0()
