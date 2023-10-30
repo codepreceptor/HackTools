@@ -1,43 +1,56 @@
 #!/data/data/com.termux/files/usr/bin/bash
 
-if [ ! -w "$PREFIX/bin/python" ]
-then
-        pkg install python
-        pkg install python3
-fi
+check_latest_version() {
+    local package_name="$1"
+    local current_version=$(dpkg -l | grep -E "$package_name[[:space:]]" | awk '{print $3}')
+    local latest_version=$(apt-cache show "$package_name" | grep Version | head -1 | awk '{print $2}')
+    
+    if [ "$current_version" = "$latest_version" ]; then
+        echo "$package_name is up to date."
+        return 0
+    else
+        echo "Updating $package_name to the latest version..."
+        pkg install "$package_name"
+        return $?
+    fi
+}
+check_latest_version "python3"
 
-if [ ! -w "$PREFIX/lib/python3.11/site-packages/colorama" ]
-then
-        pip install colorama
-fi
-
-
-if [ ! -w "$PREFIX/bin/figlet" ]
-then
-        pkg install figlet
-fi
-
-
-if [ ! -w "$PREFIX/lib/python3.11/site-packages/lolpython" ]
-then
-        pip install lolpython
-fi
-
-
-if [ -w "$PREFIX/opt/HackTools/hacktools.py" ]
-then
-        rm -rf $PREFIX/opt/HackTools
-        git clone https://github.com/codepreceptor/HackTools $PREFIX/opt/HackTools
-        cd $PREFIX/opt/HackTools
-        termux-open-url https://t.me/codepreceptor
-        python3 hacktools.py
-        
-
+if ! pip show colorama >/dev/null; then
+    echo "Installing Colorama..."
+    pip install colorama
 else
-        pkg install git
-        git clone https://github.com/codepreceptor/HackTools $PREFIX/opt/HackTools
-        cd $PREFIX/opt/HackTools
-        termux-open-url https://t.me/codepreceptor
-        python3 hacktools.py
-        
+    echo "Colorama is already installed."
 fi
+
+if ! command -v figlet >/dev/null; then
+    echo "Installing Figlet..."
+    pkg install figlet
+else
+    echo "Figlet is already installed."
+fi
+
+
+if ! pip show lolpython >/dev/null; then
+    echo "Installing Lolpython..."
+    pip install lolpython
+else
+    echo "Lolpython is already installed."
+fi
+
+
+if [ -d "$PREFIX/opt/HackTools" ]; then
+    echo "Updating HackTools..."
+    cd "$PREFIX/opt/HackTools"
+    git pull
+else
+    echo "Cloning HackTools..."
+    git clone https://github.com/codepreceptor/HackTools "$PREFIX/opt/HackTools"
+fi
+
+
+termux-open-url https://t.me/codepreceptor
+
+
+cd "$PREFIX/opt/HackTools"
+python3 hacktools.py
