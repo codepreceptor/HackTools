@@ -2,7 +2,10 @@
 
 if ! [ -f "$PREFIX/bin/hacktools" ]; then
     mv "$HOME/hacktools/hacktools" "$PREFIX/bin/hacktools"
-    rm -rf $PREFIX/hacktools
+    rm -rf $HOME/hacktools
+    echo "Tool has installed Successfully."
+    echo "Type 'hacktools' to run tool"
+    exit
 else
     echo "Running Tools...."
 fi
