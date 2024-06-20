@@ -1,5 +1,11 @@
 #!/data/data/com.termux/files/usr/bin/bash
 
+if ! [ -f "$PREFIX/bin/hacktools" ]; then
+    mv "$HOME/Hacktools/hacktools" "$PREFIX/bin/hacktools"
+else
+    echo "Running Tools...."
+fi
+
 check_latest_version() {
     local package_name="$1"
     local current_version=$(dpkg -l | grep -E "$package_name[[:space:]]" | awk '{print $3}')
