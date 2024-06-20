@@ -55,7 +55,7 @@ if [ -d "$PREFIX/opt/HackTools" ]; then
     git pull
 else
     echo "Cloning HackTools..."
-    git clone https://github.com/codepreceptor/HackTools "$PREFIX/opt/HackTools"
+    git clone https://github.com/codepreceptor/hacktools "$PREFIX/opt/HackTools"
 fi
 
 
